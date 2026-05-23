@@ -1,0 +1,14 @@
+[Unit]
+Description=iii Engine
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/quickstart
+ExecStart=/home/ubuntu/.iii/bin/iii --config config.yaml
+Restart=always
+RestartSec=5
+Environment=PATH=/home/ubuntu/.iii/bin:/usr/local/bin:/usr/bin:/bin
+
+[Install]
+WantedBy=multi-user.target

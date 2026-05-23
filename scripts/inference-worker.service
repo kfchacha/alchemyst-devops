@@ -1,0 +1,15 @@
+[Unit]
+Description=iii Inference Worker
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/quickstart/workers/inference-worker
+ExecStart=/home/ubuntu/venv/bin/python inference_worker.py
+Restart=always
+RestartSec=10
+Environment=III_URL=ws://CALLER_PRIVATE_IP:49134
+Environment=PATH=/home/ubuntu/venv/bin:/usr/local/bin:/usr/bin:/bin
+
+[Install]
+WantedBy=multi-user.target
