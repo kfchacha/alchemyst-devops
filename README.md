@@ -68,7 +68,7 @@ All of the above is defined in `terraform/` and can be reproduced with a single 
 curl -X POST http://63.34.9.220/v1/chat/completions \
   -H 'Content-Type: application/json' \
   -d '{"messages": [{"role": "user", "content": "Say hello in one sentence."}]}' \
-  --max-time 300
+  --max-time 600
 ```
 
 **Response received:**
